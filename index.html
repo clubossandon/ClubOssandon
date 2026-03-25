@@ -146,6 +146,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .plan-features{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:0.5rem}
 .plan-features li{font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;gap:0.5rem}
 .plan-features li::before{content:'✓';color:var(--gold);font-size:0.7rem;flex-shrink:0}
+.pt-wrap{margin:1px 4rem 0;border:1px solid var(--border);background:var(--dark-2);padding:1.6rem}
+.pt-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem}
+.pt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.pt-card{border:1px solid var(--border);background:var(--dark)}
+.pt-card-hd{background:#000;color:var(--white);font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:0.04em;padding:0.65rem 0.8rem;text-transform:uppercase}
+.pt-table{width:100%;border-collapse:collapse}
+.pt-table th,.pt-table td{padding:0.5rem 0.6rem;border:1px solid rgba(248,180,132,0.22);text-align:right}
+.pt-table th:first-child,.pt-table td:first-child{text-align:center}
+.pt-table th{font-size:0.82rem;letter-spacing:0.02em;background:var(--dark-3);font-weight:500}
+.pt-table td{font-size:1.05rem}
+.pt-col-muted{color:var(--text-muted)}
+.pt-col-promo{font-weight:700}
+.pt-col-promo .off{display:block;color:#ff6961;font-size:0.8rem;letter-spacing:0.06em}
 .gym-tickets{display:flex;gap:1px;margin:1px 4rem 0;background:var(--border);border:1px solid var(--border)}
 .ticket{flex:1;background:var(--dark-3);padding:2rem;display:flex;justify-content:space-between;align-items:center;transition:background 0.2s}
 .ticket:hover{background:var(--dark-4)}
@@ -158,10 +171,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .sched-row{display:flex;justify-content:space-between;padding:0.7rem 0;border-bottom:1px solid rgba(248,180,132,0.06);font-size:0.92rem}
 .sched-row:last-child{border-bottom:none}
 .sched-time{color:var(--text-muted)}
+.gym-app-note{margin:0 4rem 4rem;padding:1.2rem 1.5rem;border:1px solid var(--border);background:linear-gradient(90deg,rgba(248,180,132,0.06),transparent);font-size:0.86rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--white)}
 
 
 
-
+  
 /* GYM SPLIT GRID */
 .gym-split{margin:2px 4rem 0;height:380px;display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .gym-split-img{overflow:hidden;position:relative}
@@ -217,9 +231,12 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
   .sec-header{padding:5rem 1.5rem 2rem;grid-template-columns:1fr;gap:1.5rem}
   .divider{width:calc(100% - 3rem);margin:0 1.5rem}
   .pricing-grid,.svc-table,.gym-plans{margin:2rem 1.5rem}
+  .pt-wrap{margin:1px 1.5rem 0}
+  .pt-grid{grid-template-columns:1fr}
   .academia-layout{grid-template-columns:1fr}
   .ac-col{padding:2rem 1.5rem}
   .rules-list,.kinesio-hours,.gym-schedule{margin:0 1.5rem 2rem}
+  .gym-app-note{margin:0 1.5rem 2rem}
   .rules-list,.gym-plans{grid-template-columns:1fr}
   .kinesio-split,.gym-tickets{flex-direction:column;grid-template-columns:1fr}
   .photo-strip,.gym-hero,.kinesio-split{margin:1.5rem}
@@ -542,6 +559,51 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
       </ul>
     </div>
   </div>
+  
+<div class="pt-wrap reveal">
+    <div class="pt-title gt">Personal Trainer</div>
+    <div class="pt-grid">
+      <article class="pt-card">
+        <div class="pt-card-hd">Plan Individual</div>
+        <table class="pt-table">
+          <thead>
+            <tr>
+              <th>N° Sesiones</th>
+              <th class="pt-col-muted">Valor Lista</th>
+              <th class="pt-col-promo"><span class="off">25% OFF</span>Valor Promoción</th>
+              <th>Valor por Sesión</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>1</strong></td><td class="pt-col-muted">$25.000</td><td class="pt-col-promo">$20.000</td><td>$20.000</td></tr>
+            <tr><td><strong>4</strong></td><td class="pt-col-muted">$90.000</td><td class="pt-col-promo">$72.000</td><td>$18.000</td></tr>
+            <tr><td><strong>8</strong></td><td class="pt-col-muted">$175.000</td><td class="pt-col-promo">$140.000</td><td>$17.500</td></tr>
+            <tr><td><strong>12</strong></td><td class="pt-col-muted">$225.000</td><td class="pt-col-promo">$180.000</td><td>$15.000</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="pt-card">
+        <div class="pt-card-hd">Plan Duo</div>
+        <table class="pt-table">
+          <thead>
+            <tr>
+              <th>N° Sesiones</th>
+              <th class="pt-col-muted">Valor Lista</th>
+              <th class="pt-col-promo"><span class="off">25% OFF</span>Valor Promoción</th>
+              <th>Valor por Sesión</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>1</strong></td><td class="pt-col-muted">$50.000</td><td class="pt-col-promo">$38.000</td><td>$19.000</td></tr>
+            <tr><td><strong>4</strong></td><td class="pt-col-muted">$180.000</td><td class="pt-col-promo">$129.990</td><td>$16.250</td></tr>
+            <tr><td><strong>8</strong></td><td class="pt-col-muted">$350.000</td><td class="pt-col-promo">$239.990</td><td>$14.999</td></tr>
+            <tr><td><strong>12</strong></td><td class="pt-col-muted">$450.000</td><td class="pt-col-promo">$289.990</td><td>$12.000</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+  </div>
 
   <div class="gym-tickets reveal">
     <div class="ticket">
@@ -562,11 +624,13 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
     </div>
     <div class="sched-box">
       <div class="sched-title">Clases dirigidas</div>
-      <div class="sched-row"><span class="sched-time">19:00 – 20:00</span><span>Zumba</span></div>
-      <div class="sched-row"><span class="sched-time">20:00 – 21:00</span><span>Spinning</span></div>
+      <div class="sched-row"><span class="sched-time">20:00 – 21:00</span><span>Zumba · Lunes y Miércoles</span></div>
+      <div class="sched-row"><span class="sched-time">20:00 – 21:00</span><span>Spinning · Lunes, Miércoles y Viernes</span></div>
+      <div class="sched-row"><span class="sched-time">19:00 – 20:00</span><span>Más Bailongo · Martes y Jueves</span></div>
     </div>
   </div>
   <div class="info-bar reveal" style="margin-bottom:4rem">Contacto Gimnasio: <strong style="color:var(--white)">WhatsApp +56 9 3029 1844</strong></div>
+  <div class="gym-app-note reveal">Se debe descargar una app llamada FITI.</div>
 </section>
 
 
