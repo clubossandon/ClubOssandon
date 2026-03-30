@@ -139,7 +139,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .plan-card{background:var(--dark);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s}
 .plan-card:hover{background:var(--dark-3)}
 .plan-card.featured{background:linear-gradient(145deg,rgba(141,58,20,0.1),var(--dark-3))}
-.plan-card.featured::before{content:'POPULAR';position:absolute;top:1rem;right:-2.5rem;font-size:0.5rem;letter-spacing:0.3em;color:#0A0A0A;background:linear-gradient(90deg,#8d3a14,#f8b484);padding:0.3rem 3.5rem;transform:rotate(45deg)}
+.plan-off-ribbon{position:absolute;top:1rem;right:-3.3rem;font-size:0.58rem;letter-spacing:0.18em;color:#0A0A0A;background:linear-gradient(90deg,#8d3a14,#f8b484);padding:0.4rem 4.2rem;transform:rotate(45deg);text-transform:uppercase;font-weight:600}
 .plan-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;margin-bottom:1.5rem}
 .plan-ref{font-size:0.88rem;color:var(--text-muted);text-decoration:line-through;letter-spacing:0.05em}
 .plan-promo{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;margin-top:0.3rem}
@@ -522,44 +522,44 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
 
   <div class="gym-plans reveal">
     <div class="plan-card">
+      <div class="plan-off-ribbon">29% OFF BLACK OSSANDÓN</div>
       <div class="plan-name">Mensual</div>
       <div class="plan-ref">$54.990</div>
       <div class="plan-promo gt">$38.990</div>
       <ul class="plan-features">
-        <li><strong>29% OFF BLACK OSSANDÓN</strong></li>
         <li>Acceso al gimnasio</li>
         <li>Uso libre de máquinas y pesas</li>
         <li>Ideal para comenzar</li>
       </ul>
     </div>
     <div class="plan-card featured">
+      <div class="plan-off-ribbon">33% OFF BLACK OSSANDÓN</div>
       <div class="plan-name">Trimestral</div>
       <div class="plan-ref">$149.990</div>
       <div class="plan-promo gt">$99.990</div>
       <ul class="plan-features">
-        <li><strong>33% OFF BLACK OSSANDÓN</strong></li>
         <li>Mejor relación continuidad/precio</li>
         <li>Acceso al gimnasio</li>
         <li>Pensado para generar hábito</li>
       </ul>
     </div>
     <div class="plan-card">
+      <div class="plan-off-ribbon">27% OFF BLACK OSSANDÓN</div>
       <div class="plan-name">Semestral</div>
       <div class="plan-ref">$259.990</div>
       <div class="plan-promo gt">$189.990</div>
       <ul class="plan-features">
-        <li><strong>27% OFF BLACK OSSANDÓN</strong></li>
         <li>Compromiso de mediano plazo</li>
         <li>Acceso al gimnasio</li>
         <li>Excelente alternativa de ahorro</li>
       </ul>
     </div>
     <div class="plan-card">
+      <div class="plan-off-ribbon">27% OFF BLACK OSSANDÓN</div>
       <div class="plan-name">Anual</div>
       <div class="plan-ref">$359.880</div>
       <div class="plan-promo gt">$289.990</div>
       <ul class="plan-features">
-        <li><strong>19% OFF BLACK OSSANDÓN</strong></li>
         <li>Acceso por todo el año</li>
         <li>Mayor ahorro total</li>
         <li>Ideal para entrenar con constancia</li>
@@ -615,7 +615,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
   <div class="gym-tickets reveal">
     <div class="ticket">
       <div><div class="ticket-name">Plan Semanal</div><div class="ticket-sub">45% OFF BLACK OSSANDÓN</div></div>
-      <div class="ticket-price gt">$18.000</div>
+      <div class="ticket-price gt"><span class="ticket-price-old">$18.000</span><span class="ticket-price-new">$9.990</span></div>
     </div>
     <div class="ticket">
       <div><div class="ticket-name">Ticket Diario</div><div class="ticket-sub">Clases dirigidas + Sala de máquinas</div></div>
