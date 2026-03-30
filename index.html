@@ -164,7 +164,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .ticket:hover{background:var(--dark-4)}
 .ticket-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em}
 .ticket-sub{font-size:0.82rem;color:var(--text-muted);margin-top:0.3rem}
-.ticket-price{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold)}
+.ticket-price{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold);display:flex;flex-direction:column;align-items:flex-end;line-height:1}
+.ticket-price-old{font-size:1.1rem;color:var(--text-muted);text-decoration:line-through}
+.ticket-price-new{font-size:2rem;color:var(--gold)}
 .gym-schedule{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 4rem 4rem}
 .sched-box{padding:2rem;border:1px solid var(--border)}
 .sched-title{font-size:0.78rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
@@ -455,7 +457,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
     <div class="svc-row svc-highlight">
       <div class="svc-cell"><span class="svc-name gt" style="-webkit-text-fill-color:unset;color:var(--gold)">Beneficio Socios Club</span></div>
       <div class="svc-cell"><span class="svc-detail">Trabajadores, socios GYM, tenis, boxeo, spinning, baile entretenido, SAR La Reina, CESFAM La Reina, Centro Cultural Casona Nemesio Antúnez y Municipalidad de La Reina con tajeta vecino.</span></div>
-      <div class="svc-cell"><span class="svc-price gt">$70.000<small>PLAN · $20.000 sesión</small></span></div>
+      <div class="svc-cell"><span class="svc-price gt">$70.000<small>PLAN · + $20.000 Evaluación</small></span></div>
     </div>
   </div>
 
@@ -524,6 +526,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
       <div class="plan-ref">$54.990</div>
       <div class="plan-promo gt">$38.990</div>
       <ul class="plan-features">
+        <li><strong>29% OFF BLACK OSSANDÓN</strong></li>
         <li>Acceso al gimnasio</li>
         <li>Uso libre de máquinas y pesas</li>
         <li>Ideal para comenzar</li>
@@ -534,6 +537,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
       <div class="plan-ref">$149.990</div>
       <div class="plan-promo gt">$99.990</div>
       <ul class="plan-features">
+        <li><strong>33% OFF BLACK OSSANDÓN</strong></li>
         <li>Mejor relación continuidad/precio</li>
         <li>Acceso al gimnasio</li>
         <li>Pensado para generar hábito</li>
@@ -544,6 +548,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
       <div class="plan-ref">$259.990</div>
       <div class="plan-promo gt">$189.990</div>
       <ul class="plan-features">
+        <li><strong>27% OFF BLACK OSSANDÓN</strong></li>
         <li>Compromiso de mediano plazo</li>
         <li>Acceso al gimnasio</li>
         <li>Excelente alternativa de ahorro</li>
@@ -554,6 +559,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
       <div class="plan-ref">$359.880</div>
       <div class="plan-promo gt">$289.990</div>
       <ul class="plan-features">
+        <li><strong>19% OFF BLACK OSSANDÓN</strong></li>
         <li>Acceso por todo el año</li>
         <li>Mayor ahorro total</li>
         <li>Ideal para entrenar con constancia</li>
@@ -608,7 +614,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
 
   <div class="gym-tickets reveal">
     <div class="ticket">
-      <div><div class="ticket-name">Ticket Semanal</div><div class="ticket-sub">Clases dirigidas + Sala de máquinas</div></div>
+      <div><div class="ticket-name">Plan Semanal</div><div class="ticket-sub">45% OFF BLACK OSSANDÓN</div></div>
       <div class="ticket-price gt">$18.000</div>
     </div>
     <div class="ticket">
