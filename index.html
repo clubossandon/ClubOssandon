@@ -276,10 +276,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const anchorSection = document.querySelector('section.hero');
   if (!anchorSection || !anchorSection.parentNode) return;
 
+  let insertAfter = anchorSection;
   for (const id of orderedIds) {
     const section = document.getElementById(id);
     if (section) {
-      anchorSection.parentNode.insertBefore(section, anchorSection.nextSibling);
+      anchorSection.parentNode.insertBefore(section, insertAfter.nextSibling);
+      insertAfter = section;
     }
   }
 });
@@ -540,8 +542,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 
-  <div class="gym-black-banner reveal">
-    <span class="gt">Ossandón</span>
   </div>
 
   <div class="gym-plans reveal">
