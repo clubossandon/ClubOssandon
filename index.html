@@ -143,6 +143,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .plan-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;margin-bottom:1.5rem}
 .plan-ref{font-size:0.88rem;color:var(--text-muted);text-decoration:line-through;letter-spacing:0.05em}
 .plan-promo{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;margin-top:0.3rem}
+.plan-variant-label{margin-top:0.9rem;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted)}
+.plan-variant-price{font-family:'Bebas Neue',sans-serif;font-size:2rem;line-height:1;margin-top:0.2rem} 
 .plan-features{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:0.5rem}
 .plan-features li{font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;gap:0.5rem}
 .plan-features li::before{content:'✓';color:var(--gold);font-size:0.7rem;flex-shrink:0}
@@ -583,14 +585,17 @@ document.addEventListener('DOMContentLoaded', () => {
       </ul>
     </div>
     <div class="plan-card">
-      <div class="plan-off-ribbon">38% OFF</div>
+      <div class="plan-off-ribbon">Anual / 2x1</div>
       <div class="plan-name">Anual</div>
       <div class="plan-ref">$469.990</div>
-      <div class="plan-promo gt">$289.880</div>
+      <div class="plan-variant-label">Plan anual individual</div>
+      <div class="plan-promo gt">$289.990</div>
+      <div class="plan-variant-label">2x1 (valor por persona)</div>
+      <div class="plan-variant-price gt">$234.995</div>
       <ul class="plan-features">
         <li>Acceso por todo el año</li>
-        <li>Mayor ahorro total</li>
-        <li>Ideal para entrenar con constancia</li>
+        <li>Valor individual: $289.990</li>
+        <li>2x1: cada persona paga $234.995</li>
       </ul>
     </div>
   </div>
