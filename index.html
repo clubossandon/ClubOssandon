@@ -216,6 +216,48 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .boxeo-price{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--gold)}
 .boxeo-schedule{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 4rem 4rem}
 
+/* TRAINING TEAM */
+#training-team{position:relative;background:radial-gradient(circle at 82% 18%,rgba(168,205,44,0.18),transparent 28%),linear-gradient(180deg,var(--dark),var(--dark-2) 45%,#090b07)}
+.training-wrap{margin:2rem 4rem 0;display:grid;grid-template-columns:minmax(280px,0.9fr) 1.4fr;gap:2rem;align-items:stretch}
+.training-brand{position:relative;min-height:560px;border:1px solid rgba(168,205,44,0.3);background:linear-gradient(145deg,#f8f8f4 0%,#eff4df 54%,#10120e 54%,#080908 100%);overflow:hidden;padding:2rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 70px rgba(0,0,0,0.32)}
+.training-brand::before{content:'';position:absolute;inset:auto -18% 26% -10%;height:92px;background:linear-gradient(90deg,transparent,#a8cd2c 12%,#b7dc3a 55%,transparent);transform:skewY(-3deg);opacity:0.92}
+.training-brand::after{content:'FUNCTIONAL';position:absolute;right:-2.8rem;bottom:4.8rem;font-family:'Bebas Neue',sans-serif;font-size:6rem;letter-spacing:0.18em;color:rgba(168,205,44,0.08);transform:rotate(-90deg);transform-origin:center}
+.training-logo-card{position:relative;z-index:1;background:rgba(255,255,255,0.86);border-radius:28px;padding:2rem 1.5rem;border:1px solid rgba(10,10,10,0.08);box-shadow:0 24px 60px rgba(0,0,0,0.16)}
+.training-logo-card img{width:100%;height:auto;display:block;filter:drop-shadow(0 12px 18px rgba(0,0,0,0.12))}
+.training-kicker{position:relative;z-index:1;display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:2rem}
+.training-kicker span{border:1px solid rgba(168,205,44,0.45);color:#10120e;background:rgba(168,205,44,0.82);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.55rem 0.7rem;border-radius:999px;font-weight:500}
+.training-brand-copy{position:relative;z-index:1;color:var(--white);max-width:25rem}
+.training-brand-copy h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,7vw,6rem);line-height:0.88;letter-spacing:0.03em;color:#b7dc3a;text-shadow:0 10px 26px rgba(0,0,0,0.32)}
+.training-brand-copy p{margin-top:1rem;color:rgba(245,240,232,0.68);line-height:1.65;font-size:0.95rem}
+.training-dashboard{display:flex;flex-direction:column;gap:1rem}
+.training-selector{display:grid;grid-template-columns:repeat(5,1fr);gap:0.6rem}
+.training-selector a{position:relative;overflow:hidden;text-decoration:none;color:var(--white);border:1px solid rgba(168,205,44,0.22);background:rgba(255,255,255,0.035);padding:1rem 0.85rem;min-height:96px;display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.25s ease,border-color 0.25s ease,background 0.25s ease}
+.training-selector a::after{content:'↗';align-self:flex-end;color:#b7dc3a;transition:transform 0.25s ease}
+.training-selector a:hover{transform:translateY(-6px);border-color:#b7dc3a;background:rgba(168,205,44,0.12)}
+.training-selector a:hover::after{transform:translate(3px,-3px)}
+.training-selector strong{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:0.08em;line-height:1}
+.training-selector span{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted)}
+.training-plans{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(168,205,44,0.18);border:1px solid rgba(168,205,44,0.22)}
+.training-card{grid-column:span 2;min-height:285px;background:linear-gradient(180deg,rgba(26,26,26,0.98),rgba(10,10,10,0.98));padding:1.6rem;position:relative;overflow:hidden;transition:transform 0.28s ease,background 0.28s ease}
+.training-card:hover{transform:translateY(-8px);background:linear-gradient(180deg,rgba(34,42,20,0.98),rgba(12,13,10,0.98))}
+.training-card.featured{grid-column:span 3;background:linear-gradient(145deg,rgba(168,205,44,0.2),rgba(17,17,17,0.98) 48%,rgba(10,10,10,0.98))}
+.training-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#111,#b7dc3a,#e6ff78)}
+.training-chip{display:inline-flex;align-items:center;gap:0.35rem;border:1px solid rgba(168,205,44,0.3);color:#b7dc3a;border-radius:999px;padding:0.35rem 0.65rem;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1rem}
+.training-card h3{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;letter-spacing:0.04em;line-height:0.95;margin-bottom:1rem}
+.training-row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:0.72rem 0;border-bottom:1px solid rgba(168,205,44,0.1)}
+.training-row:last-child{border-bottom:none}
+.training-row span:first-child{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,240,232,0.82)}
+.training-price{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;color:#b7dc3a;white-space:nowrap}
+.training-note{margin:1rem 0 0;color:var(--text-muted);font-size:0.78rem;letter-spacing:0.08em;line-height:1.6;text-transform:uppercase}
+.training-cta{margin:1rem 4rem 4rem;border:1px solid rgba(168,205,44,0.28);background:linear-gradient(90deg,rgba(168,205,44,0.18),rgba(10,10,10,0.92));display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;padding:1.6rem 2rem;position:relative;overflow:hidden}
+.training-cta::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(168,205,44,0.06) 0,rgba(168,205,44,0.06) 1px,transparent 1px,transparent 18px);pointer-events:none}
+.training-cta strong{position:relative;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:0.08em;color:#b7dc3a}
+.training-cta span{position:relative;color:rgba(245,240,232,0.72);font-size:0.88rem;line-height:1.6}
+.training-actions{position:relative;display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:flex-end}
+.training-actions a{color:#0a0a0a;background:#b7dc3a;text-decoration:none;border-radius:999px;padding:0.85rem 1rem;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease}
+.training-actions a:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(168,205,44,0.2)}
+
+
 /* FOOTER */
 footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr 1fr;gap:4rem;align-items:start}
 .foot-logo{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:0.2em;line-height:1}
@@ -250,6 +292,13 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
   .photo-strip,.gym-hero,.kinesio-split{margin:1.5rem}
   .gym-black-banner{margin:1.5rem 1.5rem 0;padding:1.8rem 1rem}
   .prueba-badge,.info-bar{margin:1.5rem}
+   .training-wrap{margin:1.5rem;grid-template-columns:1fr}
+  .training-brand{min-height:470px;padding:1.4rem}
+  .training-selector{grid-template-columns:1fr 1fr}
+  .training-plans{grid-template-columns:1fr}
+  .training-card,.training-card.featured{grid-column:auto}
+  .training-cta{margin:1.5rem;padding:1.4rem;grid-template-columns:1fr}
+  .training-actions{justify-content:flex-start}
   footer{padding:4rem 1.5rem;grid-template-columns:1fr;gap:2rem}
   .foot-bottom{flex-direction:column;gap:1rem;text-align:center}
   .svc-row{grid-template-columns:1fr}
@@ -267,6 +316,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
     <li><a href="#tenis">Tenis</a></li>
     <li><a href="#academia">Academia</a></li>
     <li><a href="#boxeo">Boxeo</a></li>
+    <li><a href="#training-team">Training Team</a></li>
     <li><a href="#kinesio">Kinesiología</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
@@ -274,7 +324,7 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const orderedIds = ['gimnasio', 'tenis', 'academia', 'boxeo', 'kinesio'];
+ const orderedIds = ['gimnasio', 'tenis', 'academia', 'boxeo', 'kinesio', 'training-team'];
   const anchorSection = document.querySelector('section.hero');
   if (!anchorSection || !anchorSection.parentNode) return;
 
@@ -742,6 +792,95 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="info-bar reveal" style="margin-bottom:4rem">Más información Boxeo Contender: <strong style="color:var(--white)">www.contender.cl</strong></div>
 </section>
 
+  
+<!-- ======= TRAINING TEAM ======= -->
+<section id="training-team">
+  <div class="float-label">NUEVA ÁREA · ENTRENAMIENTO FUNCIONAL</div>
+  <div class="sec-header reveal">
+    <div>
+      <div class="sec-num gt">06 / TRAINING TEAM</div>
+      <h2 class="sec-title">Funcional que se<br><span class="gt">mueve contigo</span></h2>
+    </div>
+    <p class="sec-desc">Un cierre potente para la carpeta de ventas: planes de entrenamiento funcional, escuelas formativas, adulto mayor y sesiones personalizadas con una experiencia visual tipo dashboard para comparar rápido y activar el contacto.</p>
+  </div>
+  <div class="divider"></div>
+
+  <div class="training-wrap reveal">
+    <aside class="training-brand">
+      <div class="training-logo-card">
+        <img src="assets/training-team-logo.png" alt="Logo Training Team Entrenamiento Personalizado">
+      </div>
+      <div class="training-kicker" aria-label="Características Training Team">
+        <span>Funcional</span><span>Fútbol</span><span>Cheerleading</span><span>Adulto Mayor</span>
+      </div>
+      <div class="training-brand-copy">
+        <h3>Training<br>Team</h3>
+        <p>Entrenamientos dinámicos para mejorar fuerza, movilidad y energía, con alternativas para niños, adultos y planes personalizados.</p>
+      </div>
+    </aside>
+
+    <div class="training-dashboard">
+      <div class="training-selector" aria-label="Accesos rápidos a planes Training Team">
+        <a href="#tt-funcional"><strong>Funcional</strong><span>8 · 12 · 20 clases</span></a>
+        <a href="#tt-futbol"><strong>Escuela fútbol</strong><span>2 a 4 años</span></a>
+        <a href="#tt-cheer"><strong>Cheerleading</strong><span>6 a 12 años</span></a>
+        <a href="#tt-adulto"><strong>Adulto mayor</strong><span>Plan mensual</span></a>
+        <a href="#tt-personal"><strong>Personalizados</strong><span>1:1 / objetivo</span></a>
+      </div>
+
+      <div class="training-plans">
+        <article class="training-card featured" id="tt-funcional">
+          <div class="training-chip">Más versátil</div>
+          <h3>Funcional</h3>
+          <div class="training-row"><span>8 clases al mes</span><span class="training-price">$65.000</span></div>
+          <div class="training-row"><span>12 clases al mes</span><span class="training-price">$75.000</span></div>
+          <div class="training-row"><span>20 clases al mes</span><span class="training-price">$85.000</span></div>
+        </article>
+
+        <article class="training-card featured" id="tt-adulto">
+          <div class="training-chip">Bienestar activo</div>
+          <h3>Adulto mayor</h3>
+          <div class="training-row"><span>8 clases</span><span class="training-price">$60.000</span></div>
+          <div class="training-row"><span>12 clases</span><span class="training-price">$75.000</span></div>
+          <div class="training-row"><span>20 clases</span><span class="training-price">$85.000</span></div>
+        </article>
+
+        <article class="training-card" id="tt-futbol">
+          <div class="training-chip">Formativo</div>
+          <h3>Escuela de fútbol</h3>
+          <div class="training-row"><span>2 a 4 años</span><span class="training-price">Kids</span></div>
+          <div class="training-row"><span>4 clases al mes</span><span class="training-price">$50.000</span></div>
+        </article>
+
+        <article class="training-card" id="tt-cheer">
+          <div class="training-chip">Kids</div>
+          <h3>Escuela de cheerleading</h3>
+          <div class="training-row"><span>6 a 12 años</span><span class="training-price">4 clases</span></div>
+          <p class="training-note">Valor no informado en la imagen adjunta; se deja como plan visible para consulta comercial.</p>
+        </article>
+
+        <article class="training-card" id="tt-personal">
+          <div class="training-chip">Personalizado</div>
+          <h3>Entrenamiento 1:1</h3>
+          <div class="training-row"><span>8 clases al mes</span><span class="training-price">$180.000</span></div>
+          <div class="training-row"><span>12 clases al mes</span><span class="training-price">$240.000</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="training-cta reveal">
+    <div>
+      <strong>Matrícula $80.000</strong>
+      <span>Todos los servicios Training Team incluyen matrícula, la cual incluye uniforme.</span>
+    </div>
+    <div class="training-actions">
+      <a href="mailto:trainingteam.cl@gmail.com">trainingteam.cl@gmail.com</a>
+      <a href="tel:+56977614513">+56 9 7761 4513</a>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer id="contacto">
   <div>
@@ -754,6 +893,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="foot-item"><span class="foot-label">Email Academia</span><span class="foot-val"><a href="mailto:academiateniso@gmail.com" style="color:inherit;text-decoration:none">academiateniso@gmail.com</a></span></div>
     <div class="foot-item"><span class="foot-label">Email Club</span><span class="foot-val"><a href="mailto:hola@clubossandon.cl" style="color:inherit;text-decoration:none">hola@clubossandon.cl</a></span></div>
     <div class="foot-item"><span class="foot-label">Kinersys</span><span class="foot-val">+56 9 9199 7562 · +56 9 8772 2540</span></div>
+    <div class="foot-item"><span class="foot-label">Training Team</span><span class="foot-val"><a href="mailto:trainingteam.cl@gmail.com" style="color:inherit;text-decoration:none">trainingteam.cl@gmail.com</a> · +56 9 7761 4513</span></div>
   </div>
   <div class="foot-sec">
     <h4>Redes Sociales</h4>
