@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Training Team Entrenamiento Personalizado</title>
+  <desc id="desc">Logo de Training Team con wordmark negro, acento verde y subtítulo Entrenamiento Personalizado.</desc>
+  <rect width="900" height="520" rx="44" fill="#f8f8f4"/>
+  <path d="M94 104h712" stroke="#10120e" stroke-width="14" stroke-linecap="round"/>
+  <path d="M94 416h712" stroke="#10120e" stroke-width="14" stroke-linecap="round"/>
+  <path d="M95 346 806 176" stroke="#b7dc3a" stroke-width="54" stroke-linecap="round"/>
+  <path d="M116 332 784 172" stroke="#10120e" stroke-width="13" stroke-linecap="round" opacity="0.92"/>
+  <g fill="#10120e" font-family="Bebas Neue, Impact, Arial Black, sans-serif" text-anchor="middle">
+    <text x="450" y="238" font-size="128" letter-spacing="10">TRAINING</text>
+    <text x="450" y="348" font-size="158" letter-spacing="14">TEAM</text>
+  </g>
+  <g font-family="DM Sans, Arial, sans-serif" font-size="30" letter-spacing="8" text-anchor="middle" text-transform="uppercase">
+    <text x="450" y="466" fill="#10120e">ENTRENAMIENTO PERSONALIZADO</text>
+  </g>
+  <circle cx="127" cy="104" r="22" fill="#b7dc3a"/>
+  <circle cx="773" cy="416" r="22" fill="#b7dc3a"/>
+</svg>
