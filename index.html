@@ -230,7 +230,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .training-brand-copy h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,7vw,6rem);line-height:0.88;letter-spacing:0.03em;color:#b7dc3a;text-shadow:0 10px 26px rgba(0,0,0,0.32)}
 .training-brand-copy p{margin-top:1rem;color:rgba(245,240,232,0.68);line-height:1.65;font-size:0.95rem}
 .training-dashboard{display:flex;flex-direction:column;gap:1rem}
-.training-selector{display:grid;grid-template-columns:repeat(5,1fr);gap:0.6rem}
+.training-selector{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem}
 .training-selector a{position:relative;overflow:hidden;text-decoration:none;color:var(--white);border:1px solid rgba(168,205,44,0.22);background:rgba(255,255,255,0.035);padding:1rem 0.85rem;min-height:96px;display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.25s ease,border-color 0.25s ease,background 0.25s ease}
 .training-selector a::after{content:'↗';align-self:flex-end;color:#b7dc3a;transition:transform 0.25s ease}
 .training-selector a:hover{transform:translateY(-6px);border-color:#b7dc3a;background:rgba(168,205,44,0.12)}
@@ -238,7 +238,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .training-selector strong{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:0.08em;line-height:1}
 .training-selector span{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted)}
 .training-plans{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(168,205,44,0.18);border:1px solid rgba(168,205,44,0.22)}
-.training-card{grid-column:span 2;min-height:285px;background:linear-gradient(180deg,rgba(26,26,26,0.98),rgba(10,10,10,0.98));padding:1.6rem;position:relative;overflow:hidden;transition:transform 0.28s ease,background 0.28s ease}
+.training-card{grid-column:span 2;min-height:285px;background:linear-gradient(180deg,rgba(26,26,26,0.98),rgba(10,10,10,0.98));padding:1.6rem;position:relative;overflow:hidden;transition:transform 0.28s ease,background 0.28s ease;display:flex;flex-direction:column}
 .training-card:hover{transform:translateY(-8px);background:linear-gradient(180deg,rgba(34,42,20,0.98),rgba(12,13,10,0.98))}
 .training-card.featured{grid-column:span 3;background:linear-gradient(145deg,rgba(168,205,44,0.2),rgba(17,17,17,0.98) 48%,rgba(10,10,10,0.98))}
 .training-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#111,#b7dc3a,#e6ff78)}
@@ -249,6 +249,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .training-row span:first-child{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,240,232,0.82)}
 .training-price{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;color:#b7dc3a;white-space:nowrap}
 .training-note{margin:1rem 0 0;color:var(--text-muted);font-size:0.78rem;letter-spacing:0.08em;line-height:1.6;text-transform:uppercase}
+.training-card .training-note:last-child{margin-top:auto;padding-top:1rem}
 .training-cta{margin:1rem 4rem 4rem;border:1px solid rgba(168,205,44,0.28);background:linear-gradient(90deg,rgba(168,205,44,0.18),rgba(10,10,10,0.92));display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;padding:1.6rem 2rem;position:relative;overflow:hidden}
 .training-cta::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(168,205,44,0.06) 0,rgba(168,205,44,0.06) 1px,transparent 1px,transparent 18px);pointer-events:none}
 .training-cta strong{position:relative;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:0.08em;color:#b7dc3a}
@@ -795,13 +796,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
 <!-- ======= TRAINING TEAM ======= -->
 <section id="training-team">
-  <div class="float-label">NUEVA ÁREA · ENTRENAMIENTO FUNCIONAL</div>
+  <div class="float-label">PLANES TRAINING TEAM · TEMPORADA 2026</div>
   <div class="sec-header reveal">
     <div>
-      <div class="sec-num gt">06 / ENTRENAMIENTO FUNCIONAL</div>
+      <div class="sec-num gt">06 / PLANES TRAINING TEAM</div>
       <h2 class="sec-title">TRAINING<br><span class="gt">TEAM</span></h2>
     </div>
-    <p class="sec-desc">Entrenamiento funcional, escuelas formativas, adulto mayor y sesiones personalizadas.</p>
+    <p class="sec-desc">Planes mensuales para Training Fit, fútbol, kids, cheerleading, senior, woman, personalizados y acceso Diamond.</p>
   </div>
   <div class="divider"></div>
 
@@ -811,40 +812,43 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="assets/training-team-logo.png" alt="Logo Training Team Entrenamiento Personalizado">
       </div>
       <div class="training-kicker" aria-label="Características Training Team">
-        <span>Funcional</span><span>Fútbol</span><span>Cheerleading</span><span>Adulto Mayor</span>
+        <span>Training Fit</span><span>Fútbol</span><span>Kids</span><span>Cheerleading</span><span>Senior</span><span>Woman</span>
       </div>
       <div class="training-brand-copy">
         <h3>Training<br>Team</h3>
-        <p>Entrenamientos dinámicos para mejorar fuerza, movilidad y energía, con alternativas para niños, adultos y planes personalizados.</p>
+        <p>Entrenamientos dinámicos para distintas edades y objetivos, con alternativas grupales, personalizadas y un plan Diamond de acceso libre.</p>
       </div>
     </aside>
 
     <div class="training-dashboard">
       <div class="training-selector" aria-label="Accesos rápidos a planes Training Team">
-        <a href="#tt-funcional"><strong>Funcional</strong><span>8 · 12 · 20 clases</span></a>
-        <a href="#tt-futbol"><strong>Escuela fútbol</strong><span>2 a 4 años</span></a>
+        <a href="#tt-fit"><strong>Training Fit</strong><span>8 · 12 · 20 clases</span></a>
+        <a href="#tt-futbol"><strong>Training Fut</strong><span>Fútbol mensual</span></a>
+        <a href="#tt-kids"><strong>Kids</strong><span>2 a 17 años</span></a>
         <a href="#tt-cheer"><strong>Cheerleading</strong><span>6 a 12 años</span></a>
-        <a href="#tt-adulto"><strong>Adulto mayor</strong><span>Plan mensual</span></a>
-        <a href="#tt-personal"><strong>Personalizados</strong><span>1:1 / objetivo</span></a>
+        <a href="#tt-senior"><strong>Senior</strong><span>8 · 12 · 20 clases</span></a>
+        <a href="#tt-woman"><strong>Woman</strong><span>8 · 12 · 20 clases</span></a>
+        <a href="#tt-personal"><strong>Personalizados</strong><span>8 · 12 clases</span></a>
+        <a href="#tt-diamond"><strong>Diamond</strong><span>Acceso libre</span></a>
       </div>
 
       <div class="training-plans">
-        <article class="training-card featured" id="tt-funcional">
-          <div class="training-chip">Más versátil</div>
-          <h3>Funcional</h3>
-          <div class="training-row"><span>8 clases al mes</span><span class="training-price">$65.000</span></div>
+        <article class="training-card featured" id="tt-fit">
+          <div class="training-chip">Training Fit</div>
+          <h3>Training Fit</h3>
+          <div class="training-row"><span>8 clases al mes</span><span class="training-price">$60.000</span></div>
           <div class="training-row"><span>12 clases al mes</span><span class="training-price">$75.000</span></div>
           <div class="training-row"><span>20 clases al mes</span><span class="training-price">$85.000</span></div>
         </article>
 
-        <article class="training-card featured" id="tt-adulto">
-          <div class="training-chip">Bienestar activo</div>
-          <h3>Adulto mayor</h3>
-          <div class="training-row"><span>8 clases</span><span class="training-price">$60.000</span></div>
-          <div class="training-row"><span>12 clases</span><span class="training-price">$75.000</span></div>
-          <div class="training-row"><span>20 clases</span><span class="training-price">$85.000</span></div>
+          <article class="training-card" id="tt-kids">
+          <div class="training-chip">Niños y jóvenes</div>
+          <h3>Training Kids</h3>
+          <div class="training-row"><span>2 a 4 años · 4 clases al mes</span><span class="training-price">$50.000</span></div>
+          <div class="training-row"><span>5 a 17 años · 4 clases al mes</span><span class="training-price">$50.000</span></div>
+          <div class="training-row"><span>5 a 17 años · 8 clases al mes</span><span class="training-price">$60.000</span></div>
         </article>
-
+        
         <article class="training-card" id="tt-futbol">
           <div class="training-chip">Formativo</div>
           <h3>Escuela de fútbol</h3>
@@ -853,17 +857,39 @@ document.addEventListener('DOMContentLoaded', () => {
         </article>
 
         <article class="training-card" id="tt-cheer">
-          <div class="training-chip">Kids</div>
-          <h3>Escuela de cheerleading</h3>
-          <div class="training-row"><span>6 a 12 años</span><span class="training-price">4 clases</span></div>
-          <p class="training-note"></p>
+          <div class="training-chip">6 a 12 años</div>
+          <h3>Training Cheerleading</h3>
+          <div class="training-row"><span>4 clases al mes</span><span class="training-price">$60.000</span></div>
+        </article>
+
+        <article class="training-card" id="tt-senior">
+          <div class="training-chip">Senior</div>
+          <h3>Training Senior</h3>
+          <div class="training-row"><span>8 clases al mes</span><span class="training-price">$60.000</span></div>
+          <div class="training-row"><span>12 clases al mes</span><span class="training-price">$75.000</span></div>
+          <div class="training-row"><span>20 clases al mes</span><span class="training-price">$85.000</span></div>
+        </article>
+
+        <article class="training-card" id="tt-woman">
+          <div class="training-chip">Woman</div>
+          <h3>Training Woman</h3>
+          <div class="training-row"><span>8 clases al mes</span><span class="training-price">$60.000</span></div>
+          <div class="training-row"><span>12 clases al mes</span><span class="training-price">$75.000</span></div>
+          <div class="training-row"><span>20 clases al mes</span><span class="training-price">$85.000</span></div>        
         </article>
 
         <article class="training-card" id="tt-personal">
-          <div class="training-chip">Personalizado</div>
+          <div class="training-chip">Personalizados</div>
           <h3>Entrenamiento 1:1</h3>
-          <div class="training-row"><span>8 clases al mes</span><span class="training-price">$180.000</span></div>
-          <div class="training-row"><span>12 clases al mes</span><span class="training-price">$240.000</span></div>
+                    <div class="training-row"><span>8 clases al mes</span><span class="training-price">$150.000</span></div>
+          <div class="training-row"><span>12 clases al mes</span><span class="training-price">$210.000</span></div>
+        </article>
+
+        <article class="training-card featured" id="tt-diamond">
+          <div class="training-chip">Acceso libre</div>
+          <h3>Plan Diamond</h3>
+          <div class="training-row"><span>Mensualidad</span><span class="training-price">$100.000</span></div>
+          <p class="training-note">Acceso libre a todas nuestras actividades y en todo horario.</p>
         </article>
       </div>
     </div>
@@ -871,8 +897,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <div class="training-cta reveal">
     <div>
-      <strong>Matrícula $80.000</strong>
-      <span>Todos los servicios Training Team incluyen matrícula, la cual incluye uniforme.</span>
+           <strong>Matrícula $50.000</strong>
+      <span>Todos nuestros servicios tienen una matrícula de $50.000.</span>
     </div>
     <div class="training-actions">
       <a href="mailto:trainingteam.cl@gmail.com">trainingteam.cl@gmail.com</a>
