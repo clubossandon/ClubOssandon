@@ -139,10 +139,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .gym-hero .caption{position:absolute;top:50%;left:2.5rem;transform:translateY(-50%)}
 .gym-hero .caption h3{font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:0.95;letter-spacing:0.02em}
 .gym-hero .caption p{font-size:0.85rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,240,232,0.45);margin-top:1rem}
-.gym-plans{margin:2rem 4rem 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.gym-plans{margin:2rem 4rem 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
 .plan-card{background:var(--dark);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s}
 .plan-card:hover{background:var(--dark-3)}
-.plan-card.featured{background:linear-gradient(145deg,rgba(141,58,20,0.1),var(--dark-3))}
+.plan-card.featured{grid-column:1/-1;min-height:300px;padding:3.5rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:center;gap:3rem;background:radial-gradient(circle at 85% 20%,rgba(248,180,132,.2),transparent 30%),linear-gradient(135deg,rgba(141,58,20,.28),var(--dark-3) 58%);border-bottom:2px solid var(--gold)}
+.plan-card.featured::before{content:'PRODUCTO ESTRELLA';position:absolute;top:2rem;left:3.5rem;font-size:.7rem;font-weight:500;letter-spacing:.3em;color:var(--gold)}
+.plan-card.featured .plan-name{font-size:clamp(3.5rem,7vw,6rem);line-height:.9;margin:1.4rem 0 1rem}
+.plan-card.featured .plan-ref{font-size:1rem}
+.plan-card.featured .plan-promo{font-size:clamp(4rem,8vw,7rem)}
+.plan-card.featured .plan-features{margin-top:0;padding:2rem;border-left:1px solid var(--border);gap:1rem}
+.plan-card.featured .plan-features li{font-size:1rem;color:var(--white)}
 .plan-off-ribbon{position:absolute;top:1rem;right:-3.3rem;font-size:0.58rem;letter-spacing:0.18em;color:#0A0A0A;background:linear-gradient(90deg,#8d3a14,#f8b484);padding:0.4rem 4.2rem;transform:rotate(45deg);text-transform:uppercase;font-weight:600}
 .plan-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;margin-bottom:1.5rem}
 .plan-ref{font-size:0.88rem;color:var(--text-muted);text-decoration:line-through;letter-spacing:0.05em}
@@ -373,6 +379,13 @@ footer{background:var(--dark-2);padding:6rem 4rem;border-top:1px solid var(--bor
   .rules-list,.kinesio-hours,.gym-schedule{margin:0 1.5rem 2rem}
   .gym-app-note{margin:0 1.5rem 2rem}
   .rules-list,.gym-plans{grid-template-columns:1fr}
+  .plan-card.featured{grid-column:1/-1;min-height:300px;padding:3.5rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:center;gap:3rem;background:radial-gradient(circle at 85% 20%,rgba(248,180,132,.2),transparent 30%),linear-gradient(135deg,rgba(141,58,20,.28),var(--dark-3) 58%);border-bottom:2px solid var(--gold)}
+  .plan-card.featured::before{content:'PRODUCTO ESTRELLA';position:absolute;top:2rem;left:3.5rem;font-size:.7rem;font-weight:500;letter-spacing:.3em;color:var(--gold)}
+  .plan-card.featured .plan-name{font-size:clamp(3.5rem,7vw,6rem);line-height:.9;margin:1.4rem 0 1rem}
+  .plan-card.featured .plan-ref{font-size:1rem}
+  .plan-card.featured .plan-promo{font-size:clamp(4rem,8vw,7rem)}
+  .plan-card.featured .plan-features{margin-top:0;padding:2rem;border-left:1px solid var(--border);gap:1rem}
+  .plan-card.featured .plan-features li{font-size:1rem;color:var(--white)}
   .kinesio-split,.gym-tickets{flex-direction:column;grid-template-columns:1fr}
   .photo-strip,.gym-hero,.kinesio-split{margin:1.5rem}
   .gym-black-banner{margin:1.5rem 1.5rem 0;padding:1.8rem 1rem}
@@ -703,10 +716,23 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
   
  <div class="gym-black-banner reveal">
-        <span class="gt">TEMPORADA INVIERNO</span>
+        <span class="gt">FINAL DE TEMPORADA</span>
   </div>
   
   <div class="gym-plans reveal">
+  <div class="plan-card featured">
+      <div>
+        <div class="plan-off-ribbon">35% OFF</div>
+        <div class="plan-name">Trimestral</div>
+        <div class="plan-ref">$149.990</div>
+        <div class="plan-promo gt">$99.990</div>
+      </div>
+      <ul class="plan-features">
+        <li>Mejor relación continuidad/precio</li>
+        <li>Acceso al gimnasio</li>
+        <li>Pensado para generar hábito</li>
+      </ul>
+    </div>  
     <div class="plan-card">
       <div class="plan-off-ribbon">30% OFF</div>
       <div class="plan-name">Plan Mensual</div>
@@ -718,18 +744,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li>Ideal para comenzar</li>
       </ul>
     </div>
-    <div class="plan-card featured">
-      <div class="plan-off-ribbon">35% OFF</div>
-      <div class="plan-name">Trimestral</div>
-      <div class="plan-ref">$149.990</div>
-      <div class="plan-promo gt">$99.990</div>
-      <ul class="plan-features">
-        <li>Mejor relación continuidad/precio</li>
-        <li>Acceso al gimnasio</li>
-        <li>Pensado para generar hábito</li>
-      </ul>
-    </div>
-    <div class="plan-card">
+      <div class="plan-card">
       <div class="plan-off-ribbon">40% OFF</div>
       <div class="plan-name">Semestral</div>
       <div class="plan-ref">$259.990</div>
@@ -768,7 +783,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="gym-tickets reveal">
     <div class="ticket">
       <div><div class="ticket-name">Ticket Semanal</div><div class="ticket-sub">Acceso al gimnasio por semana</div></div>
-      <div class="ticket-price gt">$18.000</div>
+      <div class="ticket-price gt">$14.990</div>
     </div>
     <div class="ticket">
       <div><div class="ticket-name">Ticket Diario</div><div class="ticket-sub">Clases dirigidas + sala de máquinas</div></div>
