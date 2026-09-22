@@ -261,8 +261,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .training-card .training-note:last-child{margin-top:auto;padding-top:1rem}
 .training-pricing-focus{display:flex;flex-direction:column;gap:1rem}
 .training-price-hero{border:1px solid rgba(168,205,44,0.34);background:linear-gradient(145deg,rgba(168,205,44,0.16),rgba(10,10,10,0.95) 58%);padding:1.7rem;position:relative;overflow:hidden}
-.training-price-hero::after{content:'30% OFF';position:absolute;right:-0.7rem;top:1.2rem;font-family:'Bebas Neue',sans-serif;font-size:3.8rem;letter-spacing:0.08em;color:rgba(168,205,44,0.08);transform:rotate(-8deg)}
-.training-price-eyebrow{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:#b7dc3a;margin-bottom:0.7rem}
+.training-price-hero::after{content:'MATRÍCULA GRATIS';position:absolute;right:-0.7rem;top:1.2rem;font-family:'Bebas Neue',sans-serif;font-size:3.8rem;letter-spacing:0.08em;color:rgba(168,205,44,0.08);transform:rotate(-8deg)}.training-price-eyebrow{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:#b7dc3a;margin-bottom:0.7rem}
 .training-price-hero h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.7rem,5vw,4.4rem);line-height:0.9;letter-spacing:0.03em;margin-bottom:0.9rem}
 .training-price-hero p{color:rgba(245,240,232,0.72);font-size:0.9rem;line-height:1.7;max-width:42rem}
 .training-highlight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.85rem;margin-top:1.4rem}
@@ -270,6 +269,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .training-highlight-card span{display:block;color:rgba(245,240,232,0.68);font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:0.35rem}
 .training-highlight-card strong{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4vw,3.5rem);line-height:1;color:#b7dc3a}
 .training-highlight-card small{display:block;color:rgba(245,240,232,0.48);font-size:0.76rem;margin-top:0.45rem;line-height:1.5}
+.training-term-prices{display:grid;grid-template-columns:repeat(3,1fr);gap:0.45rem;margin-top:0.8rem;padding-top:0.8rem;border-top:1px solid rgba(168,205,44,0.14)}
+.training-term-prices div{min-width:0}
+.training-term-prices small{margin:0 0 0.2rem;text-transform:uppercase;letter-spacing:0.08em}
+.training-term-prices b{display:block;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;color:var(--white);font-weight:400;white-space:nowrap}  
 .training-price-sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
 .training-price-box{border:1px solid rgba(168,205,44,0.24);background:rgba(10,10,10,0.86);padding:1.35rem;position:relative;overflow:hidden}
 .training-price-box.wide{grid-column:1/-1}
@@ -918,8 +921,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="sec-num gt">06 / PLANES TRAINING TEAM</div>
       <h2 class="sec-title">TRAINING<br><span class="gt">TEAM</span></h2>
     </div>
-    <p class="sec-desc">Planes mensuales para Training Fit, fútbol, kids, cheerleading, senior, woman, personalizados y acceso Platinium.</p>
-  </div>
+    <p class="sec-desc">Planes para Training Fit, fútbol, kids, cheerleading, woman y entrenamientos personalizados, con una alternativa Senior independiente.</p>  </div>
   <div class="divider"></div>
 
   <div class="training-wrap reveal">
@@ -935,22 +937,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <div class="training-dashboard">
         <div class="training-selector" aria-label="Accesos rápidos a precios Training Team">
-        <a href="#tt-funcional"><strong>Funcional</strong><span>Fit · Woman · Senior · Soccer</span></a>
+        <a href="#tt-funcional"><strong>Funcional</strong><span>Fit · Woman · Fútbol</span></a>
+        <a href="#tt-senior"><strong>Senior</strong><span>Adulto mayor</span></a>          
         <a href="#tt-escuelas"><strong>Escuelas</strong><span>Taekwondo · Kids · Cheer</span></a>
         <a href="#tt-personal"><strong>Personalizados</strong><span>Clases 1 a 1</span></a>
-        <a href="#tt-descuentos"><strong>Descuentos</strong><span>Trimestral · Semestral · Anual</span></a>
+        <a href="#tt-funcional"><strong>Permanencias</strong><span>Mensual · Semestral · Anual</span></a>
       </div>
       
       <div class="training-pricing-focus">
         <div class="training-price-hero" id="tt-funcional">
-          <div class="training-price-eyebrow">Entrenamiento funcional · primer mes 30% OFF</div>
-          <h3>Precios claros para empezar hoy</h3>
-          <p>Valores actualizados para Training Fit, Woman, Seniors y Soccer. La matrícula es de $15.000 e incluye evaluación kinésica.</p>
+          <div class="training-price-eyebrow">Training Fit · Woman · Fútbol · clases grupales</div>
+          <h3>Entrenamiento funcional</h3>
+          <p>Elige tu frecuencia y permanencia. Durante este mes, la matrícula es gratis.</p>
           <div class="training-highlight-grid">
             <div class="training-highlight-card">
               <span>8 clases al mes</span>
-              <strong>$42.000</strong>
-              <small>Precio primer mes con 30% de descuento · valor normal $60.000.</small>
+              <strong>$55.000</strong>
+              <div class="training-term-prices"><div><small>Mensual</small><b>$55.000</b></div><div><small>Semestral</small><b>$270.000</b></div><div><small>Anual</small><b>$360.000</b></div></div>
             </div>
             <div class="training-highlight-card">
               <span>12 clases al mes</span>
@@ -960,18 +963,20 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
 
-        <div class="training-discount-strip" id="tt-descuentos" aria-label="Descuentos por permanencia Training Team">
-          <div><strong>15%</strong><span>Plan trimestral</span></div>
-          <div><strong>20%</strong><span>Plan semestral</span></div>
-          <div><strong>30%</strong><span>Plan anual</span></div>
-        </div>
+        <div class="training-price-box wide" id="tt-senior">
+          <h4>Funcional adulto mayor · Senior</h4>
+          <p>Un plan independiente pensado especialmente para adultos mayores. Durante este mes, la matrícula es gratis.</p>
+          <div class="training-price-list">
+            <div class="training-price-item"><span>8 clases al mes</span><strong>$17.000</strong></div>
+            <div class="training-price-item"><span>12 clases al mes</span><strong>$15.000</strong></div>
+          </div>
         
         <div class="training-price-sections">
           <div class="training-price-box" id="tt-escuelas">
             <h4>Escuelas deportivas</h4>
-            <p>Matrícula anual $70.000. Incluye evaluación kinésica y uniforme.</p>
+            <p>Matrícula anual $50.000.</p>
             <div class="training-price-list">
-              <div class="training-price-item"><span>Taekwondo desde los 6 años<small>8 clases al mes</small></span><strong>$60.000</strong></div>
+              <div class="training-price-item"><span>Taekwondo desde los 6 años<small>8 clases al mes</small></span><strong>$55.000</strong></div>
               <div class="training-price-item"><span>Training Kids Fútbol 3 a 5 años<small>4 clases al mes</small></span><strong>$50.000</strong></div>
               <div class="training-price-item"><span>Cheerleaders<small>4 clases al mes</small></span><strong>$55.000</strong></div>
               <div class="training-price-item"><span>Training Keeper<small>Arqueros fútbol · 4 clases al mes</small></span><strong>$50.000</strong></div>
@@ -980,10 +985,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <div class="training-price-box" id="tt-personal">
             <h4>Personalizados 1 a 1</h4>
-            <p>Entrenamiento individual con foco en objetivos personales.</p>
+            <p>Funcional, fútbol, tenis, básquet, vóley y otras disciplinas. Matrícula gratis durante este mes.</p>
             <div class="training-price-list">
-              <div class="training-price-item"><span>4 clases al mes</span><strong>$120.000</strong></div>
-              <div class="training-price-item"><span>8 clases al mes</span><strong>$160.000</strong></div>
+              <div class="training-price-item"><span>4 clases al mes<small>Semestral $480.000 · Anual $900.000</small></span><strong>$100.000</strong></div>
+              <div class="training-price-item"><span>8 clases al mes<small>Semestral $840.000 · Anual $1.560.000</small></span><strong>$160.000</strong></div>
             </div>
           </div>
         </div>
@@ -994,7 +999,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="training-cta reveal">
     <div>
             <strong>Agenda tu evaluación y elige el plan Training Team ideal para ti</strong>
-      <span>Funcional: matrícula $15.000 con evaluación kinésica · Escuelas deportivas: matrícula anual $70.000 con evaluación kinésica y uniforme.</span>
+      <span>Funcional, Senior y personalizados: matrícula gratis durante este mes · Escuelas deportivas: matrícula anual $50.000.</span>
     </div>
     <div class="training-actions">
       <a href="mailto:trainingteam.cl@gmail.com">trainingteam.cl@gmail.com</a>
