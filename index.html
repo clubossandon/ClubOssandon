@@ -140,9 +140,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .gym-hero .caption h3{font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:0.95;letter-spacing:0.02em}
 .gym-hero .caption p{font-size:0.85rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,240,232,0.45);margin-top:1rem}
 .gym-plans{margin:2rem 4rem 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
-.plan-card{background:var(--dark);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s}
-.plan-card:hover{background:var(--dark-3)}
-.plan-card.featured{grid-column:1/-1;min-height:300px;padding:3.5rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:center;gap:3rem;background:radial-gradient(circle at 85% 20%,rgba(248,180,132,.2),transparent 30%),linear-gradient(135deg,rgba(141,58,20,.28),var(--dark-3) 58%);border-bottom:2px solid var(--gold)}
+.plan-card{background:radial-gradient(circle at 85% 20%,rgba(248,180,132,.2),transparent 30%),linear-gradient(135deg,rgba(141,58,20,.28),var(--dark-3) 58%);border-bottom:2px solid var(--gold);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:filter 0.3s}
+.plan-card:hover{filter:brightness(1.12)}
+.plan-card.featured{grid-column:1/-1;min-height:300px;padding:3.5rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:center;gap:3rem}
 .plan-card.featured::before{content:'PRODUCTO ESTRELLA';position:absolute;top:2rem;left:3.5rem;font-size:.7rem;font-weight:500;letter-spacing:.3em;color:var(--gold)}
 .plan-card.featured .plan-name{font-size:clamp(3.5rem,7vw,6rem);line-height:.9;margin:1.4rem 0 1rem}
 .plan-card.featured .plan-ref{font-size:1rem}
@@ -736,18 +736,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li>Pensado para generar hábito</li>
       </ul>
     </div>  
-    <div class="plan-card">
-      <div class="plan-off-ribbon">36% OFF</div>
-      <div class="plan-name">Plan Mensual</div>
-      <div class="plan-ref">$54.990</div>
-      <div class="plan-promo gt">$34.990</div>
-      <ul class="plan-features">
-        <li>Acceso al gimnasio</li>
-        <li>Uso libre de máquinas y pesas</li>
-        <li>Ideal para comenzar</li>
-      </ul>
-    </div>
-      <div class="plan-card">
+        <div class="plan-card">
       <div class="plan-off-ribbon">42% OFF</div>
       <div class="plan-name">Semestral</div>
       <div class="plan-ref">$259.990</div>
@@ -768,7 +757,17 @@ document.addEventListener('DOMContentLoaded', () => {
        </ul>
     </div>
   </div>
-  
+    <div class="plan-card">
+      <div class="plan-off-ribbon">36% OFF</div>
+      <div class="plan-name">Plan Mensual</div>
+      <div class="plan-ref">$54.990</div>
+      <div class="plan-promo gt">$34.990</div>
+      <ul class="plan-features">
+        <li>Acceso al gimnasio</li>
+        <li>Uso libre de máquinas y pesas</li>
+        <li>Ideal para comenzar</li>
+      </ul>
+    </div>
 <div class="gym-schedule reveal">
     <div class="sched-box">
       <div class="sched-title">Horario de funcionamiento</div>
@@ -811,8 +810,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <tbody>
             <tr><td><strong>1</strong></td><td class="pt-col-muted">$25.000</td><td class="pt-col-promo">$20.000</td><td>$20.000</td></tr>
             <tr><td><strong>4</strong></td><td class="pt-col-muted">$90.000</td><td class="pt-col-promo">$72.000</td><td>$18.000</td></tr>
-            <tr><td><strong>8</strong></td><td class="pt-col-muted">$175.000</td><td class="pt-col-promo">$140.000</td><td>$17.500</td></tr>
-            <tr><td><strong>12</strong></td><td class="pt-col-muted">$225.000</td><td class="pt-col-promo">$180.000</td><td>$15.000</td></tr>
+            <tr><td><strong>8</strong></td><td class="pt-col-muted">$175.000</td><td class="pt-col-promo">$114.990</td><td>$14.375</td></tr>
+            <tr><td><strong>12</strong></td><td class="pt-col-muted">$225.000</td><td class="pt-col-promo">$149.990</td><td>$12.500</td></tr>
           </tbody>
         </table>
       </article>
