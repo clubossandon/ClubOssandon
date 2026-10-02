@@ -152,7 +152,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .plan-card.featured .plan-promo{font-size:clamp(4rem,8vw,7rem)}
 .plan-card.featured .plan-features{margin-top:0;padding:2rem;border-left:1px solid var(--border);gap:1rem}
 .plan-card.featured .plan-features li{font-size:1rem;color:var(--white)}
-.plan-off-ribbon{position:absolute;top:1rem;right:-3.3rem;font-size:0.58rem;letter-spacing:0.18em;color:#0A0A0A;background:linear-gradient(90deg,#8d3a14,#f8b484);padding:0.4rem 4.2rem;transform:rotate(45deg);text-transform:uppercase;font-weight:600}
+.plan-off-ribbon{position:absolute;top:1.5rem;right:-3.45rem;width:11rem;padding:0.55rem 0;text-align:center;font-size:var(--discount-size,0.82rem);line-height:1;letter-spacing:0.12em;color:#0A0A0A;background:linear-gradient(90deg,#8d3a14,#f8b484);box-shadow:0 5px 18px rgba(0,0,0,0.3);transform:rotate(45deg);text-transform:uppercase;font-weight:700}
+.plan-off-ribbon--36{--discount-size:0.82rem}
+.plan-off-ribbon--40{--discount-size:0.94rem}
+.plan-off-ribbon--42{--discount-size:1.05rem}
+.plan-off-ribbon--50{--discount-size:1.25rem}  
 .plan-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;margin-bottom:1.5rem}
 .plan-ref{font-size:0.88rem;color:var(--text-muted);text-decoration:line-through;letter-spacing:0.05em}
 .plan-promo{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;margin-top:0.3rem}
@@ -170,6 +174,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .pt-table th,.pt-table td{padding:0.5rem 0.6rem;border:1px solid rgba(248,180,132,0.22);text-align:right}
 .pt-table th:first-child,.pt-table td:first-child{text-align:center}
 .pt-table th{font-size:0.82rem;letter-spacing:0.02em;background:var(--dark-3);font-weight:500}
+.pt-cyber-row{background:linear-gradient(90deg,rgba(248,180,132,0.04),rgba(141,58,20,0.13),rgba(248,180,132,0.04))}
+.pt-cyber-price{position:relative}
+.pt-cyber-badge{display:block;width:4.8rem;margin:0.35rem 0 0 auto;padding:0.25rem 0.35rem;border:1px solid rgba(248,180,132,0.72);border-radius:999px;background:linear-gradient(90deg,#8d3a14,#f8b484);box-shadow:0 0 14px rgba(248,180,132,0.25);color:#0a0a0a;font-size:0.55rem;font-weight:700;line-height:1.05;letter-spacing:0.06em;text-align:center;text-transform:uppercase}
+.pt-cyber-badge strong{display:block;font-size:0.68rem}  
 .pt-table td{font-size:1.05rem}
 .pt-col-muted{color:var(--text-muted)}
 .pt-col-promo{font-weight:700}
@@ -729,7 +737,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="gym-plans reveal">
   <div class="plan-card featured">
       <div>
-        <div class="plan-off-ribbon">50% OFF</div>
+        <div class="plan-off-ribbon plan-off-ribbon--50">50% OFF</div>
         <div class="plan-name">ANUAL</div>
         <div class="plan-ref">$469.990</div>
         <div class="plan-promo gt">$239.990</div>
@@ -741,7 +749,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </ul>
     </div>  
         <div class="plan-card plan-card--semestral">
-      <div class="plan-off-ribbon">42% OFF</div>
+      <div class="plan-off-ribbon plan-off-ribbon--42">42% OFF</div>
       <div class="plan-name">Semestral</div>
       <div class="plan-ref">$259.990</div>
       <div class="plan-promo gt">$149.990</div>
@@ -752,7 +760,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </ul>
     </div>
     <div class="plan-card plan-card--trimestral">
-      <div class="plan-off-ribbon">40% OFF</div>
+      <div class="plan-off-ribbon plan-off-ribbon--40">40% OFF</div>
       <div class="plan-name">Trimestral</div>
       <div class="plan-ref">$149.990</div>
        <div class="plan-promo gt">$89.990</div>
@@ -761,7 +769,7 @@ document.addEventListener('DOMContentLoaded', () => {
        </ul>
     </div>
     <div class="plan-card plan-card--mensual">
-      <div class="plan-off-ribbon">36% OFF</div>
+      <div class="plan-off-ribbon plan-off-ribbon--36">36% OFF</div>
       <div class="plan-name">Plan Mensual</div>
       <div class="plan-ref">$54.990</div>
       <div class="plan-promo gt">$34.990</div>
@@ -806,15 +814,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <tr>
               <th>N° Sesiones</th>
               <th class="pt-col-muted">Valor Lista</th>
-              <th class="pt-col-promo"><span class="off">25% OFF</span>Valor Promoción</th>
+              <th class="pt-col-promo"><span class="off">20% OFF</span>Valor Promoción</th>
               <th>Valor por Sesión</th>
             </tr>
           </thead>
           <tbody>
             <tr><td><strong>1</strong></td><td class="pt-col-muted">$25.000</td><td class="pt-col-promo">$20.000</td><td>$20.000</td></tr>
             <tr><td><strong>4</strong></td><td class="pt-col-muted">$90.000</td><td class="pt-col-promo">$72.000</td><td>$18.000</td></tr>
-            <tr><td><strong>8</strong></td><td class="pt-col-muted">$175.000</td><td class="pt-col-promo">$114.990</td><td>$14.375</td></tr>
-            <tr><td><strong>12</strong></td><td class="pt-col-muted">$225.000</td><td class="pt-col-promo">$149.990</td><td>$12.500</td></tr>
+            <tr class="pt-cyber-row"><td><strong>8</strong></td><td class="pt-col-muted">$175.000</td><td class="pt-col-promo pt-cyber-price">$114.990<span class="pt-cyber-badge">Precio Cyber <strong>35%</strong></span></td><td>$14.375</td></tr>
+            <tr class="pt-cyber-row"><td><strong>12</strong></td><td class="pt-col-muted">$225.000</td><td class="pt-col-promo pt-cyber-price">$149.990<span class="pt-cyber-badge">Precio Cyber <strong>35%</strong></span></td><td>$12.500</td></tr>
           </tbody>
         </table>
       </article>
@@ -826,7 +834,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <tr>
               <th>N° Sesiones</th>
               <th class="pt-col-muted">Valor Lista</th>
-              <th class="pt-col-promo"><span class="off">25% OFF</span>Valor Promoción</th>
+              <th class="pt-col-promo"><span class="off">20% OFF</span>Valor Promoción</th>
               <th>Valor por Sesión</th>
             </tr>
           </thead>
